@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import List from './components/List'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const data: string = '[{ "id": 14,"first_name": "Ike","height_feet": null,"height_inches": null,"last_name": "Anigbogu","position": "C","team": {"id": 12,"abbreviation": "IND","city": "Indiana","conference": "East","division": "Central", "full_name": "Indiana Pacers", "name": "Pacers"},"weight_pounds": null}]'
+const [players, setPlayers] = useState(JSON.parse(data))
+return (
+  <div className="App">
+    NBA Players
+    <List items={players} />
+  </div>
+);
 }
 
 export default App;
