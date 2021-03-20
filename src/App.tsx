@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import List from './components/List'
 
 
 function App() {
-const data: string = '[{ "id": 14,"first_name": "Ike","height_feet": null,"height_inches": null,"last_name": "Anigbogu","position": "C","team": {"id": 12,"abbreviation": "IND","city": "Indiana","conference": "East","division": "Central", "full_name": "Indiana Pacers", "name": "Pacers"},"weight_pounds": null}]'
-const [players, setPlayers] = useState(JSON.parse(data))
+
+const [players, setPlayers] = useState([])
+useEffect(() => {
+  fetch(`https://www.balldontlie.io/api/v1/players`)
+  .then(res => res.json())
+  .then(
+    result => setPlayers(result.data),
+    error => console.log(error)
+  )
+})
 return (
   <div className="App">
     NBA Players
