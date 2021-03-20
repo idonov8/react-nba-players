@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
-import { updateStatement } from 'typescript';
 import './App.css';
 import List from './components/List'
 import Player from './types/Player'
 
 function App() {
-
 const [players, setPlayers] = useState<Array<Player>>([])
+
 useEffect(() => {
   console.log("Fetching data")
   fetch(`https://www.balldontlie.io/api/v1/players`)
   .then(res => res.json())
   .then(
-    result => setPlayers(result.data.map((player: any) => {
+    result => setPlayers(result.data.map((player: Player) => {
       return {...player, favorite: false}
     })),
     error => console.log(error)
@@ -27,7 +26,7 @@ const handleFavorite = (id: number, checked: boolean) => {
       prevPlayers[prevPlayers.indexOf(player)].favorite = checked
       console.log(prevPlayers);
     }
-    return prevPlayers
+    return [...prevPlayers]
   })
 }
 
@@ -41,7 +40,6 @@ return (
   </div>
 );
 }
-
 export default App;
 
 const ListsContatiner = styled.div`

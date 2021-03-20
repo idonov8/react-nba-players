@@ -15,5 +15,5 @@ export default interface Player {
         name:String
     },
     weight_pounds?: number,
-    favorite?: boolean  
+    favorite: boolean  
 }
