@@ -35,7 +35,7 @@ return (
     <h1>NBA Players</h1>
     <ListsContatiner>
       <List title="Players:" items={players} handleFavorite={handleFavorite} />
-      <List title="Favorites:" items={players.filter(player => player.favorite)} handleFavorite={handleFavorite} />
+      <List title="Favorites:" bgColors={['White', 'Teal', 'Yellow']} items={players.filter(player => player.favorite)} handleFavorite={handleFavorite} />
     </ListsContatiner>
   </div>
 );
