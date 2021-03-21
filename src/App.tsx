@@ -3,19 +3,24 @@ import styled from 'styled-components'
 import './App.css';
 import List from './components/List'
 import Player from './types/Player'
+import { useAlert } from 'react-alert'
 
 function App() {
 const [players, setPlayers] = useState<Array<Player>>([])
+const alert = useAlert()
 
 useEffect(() => {
   console.log("Fetching data")
+  alert.info('Loading...', {
+    timeout: 1000
+  })
   fetch(`https://www.balldontlie.io/api/v1/players`)
   .then(res => res.json())
   .then(
     result => setPlayers(result.data.map((player: Player) => {
       return {...player, favorite: false}
     })),
-    error => console.log(error)
+    error => alert.error('Error while fetching, try again')
   )
 }, [])
 
