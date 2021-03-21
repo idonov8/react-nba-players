@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-nba-players/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/react-nba-players/static/js/main.e145c09b.chunk.js",
+    "main.js.map": "/react-nba-players/static/js/main.e145c09b.chunk.js.map",
+    "runtime-main.js": "/react-nba-players/static/js/runtime-main.869ee027.js",
+    "runtime-main.js.map": "/react-nba-players/static/js/runtime-main.869ee027.js.map",
+    "static/js/2.246afc58.chunk.js": "/react-nba-players/static/js/2.246afc58.chunk.js",
+    "static/js/2.246afc58.chunk.js.map": "/react-nba-players/static/js/2.246afc58.chunk.js.map",
+    "static/js/3.5153264b.chunk.js": "/react-nba-players/static/js/3.5153264b.chunk.js",
+    "static/js/3.5153264b.chunk.js.map": "/react-nba-players/static/js/3.5153264b.chunk.js.map",
+    "index.html": "/react-nba-players/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/react-nba-players/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.246afc58.chunk.js.LICENSE.txt": "/react-nba-players/static/js/2.246afc58.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.869ee027.js",
+    "static/js/2.246afc58.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.e145c09b.chunk.js"
+  ]
+}
