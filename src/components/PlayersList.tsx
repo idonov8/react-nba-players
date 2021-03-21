@@ -8,7 +8,7 @@ interface Props {
     items: Array<Player>
     handleFavorite: (id: number, checked: boolean) => void
 }
-const List: React.FC<Props> = (props) => {
+const PlayersList: React.FC<Props> = (props) => {
     const [searchField, setSearchField] = useState('')
     const [bgColor, setBgColor] = useState('white')
 
@@ -35,4 +35,4 @@ const List: React.FC<Props> = (props) => {
     )
 }
 
-export default List
+export default PlayersList

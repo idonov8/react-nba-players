@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 import './App.css';
-import List from './components/List'
+import PlayersList from './components/PlayersList'
 import Player from './types/Player'
 import { useAlert } from 'react-alert'
 
@@ -39,8 +39,8 @@ return (
   <div className="App">
     <h1>NBA Players</h1>
     <ListsContatiner>
-      <List title="Players:" items={players} handleFavorite={handleFavorite} />
-      <List title="Favorites:" bgColors={['White', 'Teal', 'Yellow']} items={players.filter(player => player.favorite)} handleFavorite={handleFavorite} />
+      <PlayersList title="Players:" items={players} handleFavorite={handleFavorite} />
+      <PlayersList title="Favorites:" bgColors={['White', 'Teal', 'Yellow']} items={players.filter(player => player.favorite)} handleFavorite={handleFavorite} />
     </ListsContatiner>
   </div>
 );
