@@ -34,8 +34,8 @@ return (
   <div className="App">
     <h1>NBA Players</h1>
     <ListsContatiner>
-      <List items={players} handleFavorite={handleFavorite} />
-      <List items={players.filter(player => player.favorite)} handleFavorite={handleFavorite} />
+      <List title="Players:" items={players} handleFavorite={handleFavorite} />
+      <List title="Favorites:" items={players.filter(player => player.favorite)} handleFavorite={handleFavorite} />
     </ListsContatiner>
   </div>
 );
